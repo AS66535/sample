@@ -1,0 +1,10 @@
+.ng-valid
+{
+    border: solid thin greenyellow;
+    /*background-color: greenyellow;*/
+}
+.ng-invalid
+{
+    border: solid thin red
+    /*background-color: red;*/
+}

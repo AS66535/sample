@@ -1,0 +1,84 @@
+<p>test2 works!</p>
+
+{{studentForm.value | json}}
+<form #studentForm="ngForm">
+
+    <table>
+        
+        <tr>
+            <td><label>RollNo</label></td>
+            <td>
+                <input 
+                    required
+                    #Rollno="ngModel"
+                    name="textno"
+                    [(ngModel)]="rollno"
+                >
+               <div *ngIf="Rollno.touched && Rollno.invalid">
+                   RollNo is Mandatotry
+               </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label>Name</label></td>
+            <td>
+                <input 
+                    minlength="5" maxlength="15"
+                    #Name="ngModel"
+                    name="txtname"
+                    [(ngModel)]="name"
+                > 
+               <div *ngIf="Name.touched && Name.invalid">
+                   Name is Mandatotry
+               </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label>English</label></td>
+            <td>
+                <input
+                    min="0" max="100"
+                    #Eng="ngModel"
+                    name="english"
+                    [(ngModel)]="eng"
+                >
+                <div *ngIf="Eng.touched && Eng.invalid">
+                   Marks is in between 0 to 100
+               </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label>Maths</label></td>
+            <td>
+                <input
+                    min="0" max="100"
+                    #Math="ngModel"
+                    name="maths"
+                    [(ngModel)]="mat"
+                >
+                <div *ngIf="Math.touched && Math.invalid">
+                  Marks is in between 0 to 100
+               </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label>Science</label></td>
+            <td>
+                <input
+                    min="0" max="100"
+                    #Sci="ngModel"
+                    name="science"
+                    [(ngModel)]="sci"
+                >
+                <div *ngIf="Sci.touched && Sci.invalid">
+                  Marks is in between 0 to 100
+               </div>
+            </td>
+        </tr>
+
+    </table>
+</form>
